@@ -264,7 +264,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
     (setq tramp-ssh-controlmaster-options
       "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
     (setq-default dotspacemacs-themes '(monokai))
-    (setq-default dotspacemacs-line-numbers t)
+    (setq-default dotspacemacs-line-numbers 'relative)
     (setq-default line-spacing 0.3)
 )
 

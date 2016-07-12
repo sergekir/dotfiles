@@ -41,6 +41,7 @@ syntax enable
 colorscheme monokai
 set cursorline
 set number
+set relativenumber
 set smartindent
 set nowrap
 
