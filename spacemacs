@@ -35,13 +35,14 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-     
+
      ;; My extensions
-     
+
      ansi-term
      ranger
+     version-control
      git
-     
+
      auto-completion
      syntax-checking
 
@@ -49,7 +50,8 @@ values."
      html
      shell-scripts
      yaml
-     
+     markdown
+
      django
      react
 
@@ -275,7 +277,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  )
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
