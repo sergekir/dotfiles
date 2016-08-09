@@ -40,6 +40,7 @@ values."
 
      ansi-term
      ranger
+     org
      version-control
      git
 
