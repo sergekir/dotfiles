@@ -10,6 +10,7 @@ au BufNewFile,BufRead *.py set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 
 " Keyboard Shortcuts
+nnoremap <Space> :
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
