@@ -1,0 +1,28 @@
+[global_config]
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#0076c9"
+[keybindings]
+  copy = <Primary>c
+  paste = <Primary>v
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#272822"
+    background_image = None
+    cursor_color = "#f8f8f2"
+    cursor_shape = ibeam
+    font = DejaVu Sans Mono 11
+    foreground_color = "#f8f8f2"
+    icon_bell = False
+    palette = "#272822:#f92672:#a6e22e:#fd971f:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#75715e:#f92672:#a6e22e:#fd971f:#66d9ef:#ae81ff:#a1efe4:#f9f8f5"
+    scrollback_lines = 1500
+    scrollbar_position = hidden
+    use_system_font = False
