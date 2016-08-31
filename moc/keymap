@@ -1,5 +1,5 @@
-menu_down             = j
-menu_up               = k
-go                    = l ENTER
-go_up                 = h
-previous              = p
+menu_down = j
+menu_up = k
+go = l ENTER
+go_up = h
+previous = p
