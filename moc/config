@@ -1,0 +1,15 @@
+Repeat = yes
+
+FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)"
+
+HideFileExtension = no
+
+ShowFormat = no
+
+ShowTime = yes
+
+Theme = transparent-background
+
+Layout1 = directory(0,0,100%,100%)
+
+Keymap = keymap
