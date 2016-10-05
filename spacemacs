@@ -70,7 +70,7 @@ values."
      django
      react
 
-     dockerfile
+     docker
      yaml
      puppet
      )
