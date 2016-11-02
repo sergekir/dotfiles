@@ -52,7 +52,6 @@ values."
 
      ;; My extensions
 
-     ansi-term
      ranger
      org
      version-control
@@ -62,6 +61,7 @@ values."
      syntax-checking
 
      python
+     javascript
      html
      shell-scripts
      yaml
@@ -71,7 +71,7 @@ values."
      react
 
      docker
-     yaml
+     nginx
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -156,8 +156,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("DejaVu Sans Mono"
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -318,6 +318,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
     (setq-default dotspacemacs-line-numbers 'relative)
     (setq-default line-spacing 0.3)
     (setq-default scroll-margin 5)
+    (setq persp-auto-save-opt 0)
 )
 
 (defun dotspacemacs/user-config ()
