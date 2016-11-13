@@ -1,61 +1,57 @@
-" Python Indentions
-au BufNewFile,BufRead *.py set tabstop=8 expandtab shiftwidth=4 softtabstop=4
-"    \ set tabstop=4 |
-"    \ set softtabstop=4 |
-"    \ set shiftwidth=4 |
-"    \ set textwidth=79 |
-"    \ set expandtab |
-"    \ set autoindent |
-"    \ set fileformat=unix
+"Config
 
 
-" Keyboard Shortcuts
-nnoremap <Space> :
+"Plugins
+call plug#begin('~/.vim/plugged')
 
-" split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+Plug 'scrooloose/nerdtree'
 
-nnoremap <Tab> <C-W><C-W>
+Plug 'tpope/vim-fugitive'
 
-map <C-n> :NERDTreeToggle<CR>
+Plug 'scrooloose/syntastic'
 
+Plug 'tpope/vim-surround'
 
-" Plugins
-call plug#begin()
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'valloric/youcompleteme'
+
+Plug 'easymotion/vim-easymotion'
 
 Plug 'sickill/vim-monokai'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
-Plug 'blueyed/vim-diminactive'
+
 
 call plug#end()
 
 
-"Themes GUI
+"Interface
+filetype on
 syntax enable
-colorscheme monokai
-set cursorline
-set number
+
 set relativenumber
-set smartindent
-set nowrap
+set number
 
-"highlight CursorLine guibg=#3e3d32
+set showmatch
+set hlsearch
+set cursorline
+set scrolloff=5
 
+colorscheme monokai
 
-"Airline
+" Airline
 set laststatus=2
-let g:airline_powerline_fonts=1
 
 
-" NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd VimEnter * wincmd p
+"Key Bindings
+let mapleader = "\<Space>"
+nnoremap ; :
+nnoremap : ;
+
+
+"Python
+let g:syntastic_python_checkers = ['pylint']
+
