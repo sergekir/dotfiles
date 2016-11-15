@@ -1,4 +1,6 @@
 "Config
+set nocompatible
+filetype off
 
 
 "Plugins
@@ -24,12 +26,25 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'sickill/vim-monokai'
 
+Plug 'dhruvasagar/vim-table-mode'
+
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
+filetype plugin indent on
+
+
+"Editing
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+
 
 "Interface
-filetype on
 syntax enable
 
 set relativenumber
@@ -49,9 +64,7 @@ set laststatus=2
 "Key Bindings
 let mapleader = "\<Space>"
 nnoremap ; :
-nnoremap : ;
 
 
 "Python
 let g:syntastic_python_checkers = ['pylint']
-
