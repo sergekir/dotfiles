@@ -2,7 +2,7 @@
 
 ## GUI
 
-Desktop environment: `xubuntu-core^ xfce4-xkb-plugin`
+Desktop environment: `xubuntu-core^ xfce4-xkb-plugin xclip`
 Terminal: `gnome-terminal`
 Browser: `https://vivaldi.com`
 Theme: `http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme`
