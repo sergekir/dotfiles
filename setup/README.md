@@ -3,9 +3,13 @@
 ## GUI
 
 Desktop environment: `xubuntu-core^ xfce4-xkb-plugin xclip`
+
 Terminal: `gnome-terminal`
+
 Browser: `https://vivaldi.com`
+
 Theme: `http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme`
+
 Icons: `wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/install-papirus-home-gtk.sh | sh`
 
 
@@ -34,13 +38,17 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 ## Tools
 
 ### Build and tools
+
 `build-essential python3-pip atool p7zip-full`
 
 ### Docker
+
 `https://get.docker.com`
+
 `https://github.com/docker/compose`
 
 ### Graphics
+
 `blender inkscape gimp`
 
 ## Terminal
@@ -48,6 +56,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 ### zsh
 
 Add virtualenv and 256 color stuff
+
 and oh-my-zsh
 
 ### tmux
@@ -69,4 +78,5 @@ Switch to vim-like shortcuts
 `https://github.com/chriskempson/base16-shell`
 
 ### Font: Source Code Pro
+
 `https://github.com/adobe-fonts/source-code-pro`
