@@ -32,12 +32,16 @@ Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'SirVer/ultisnips'
+
+Plug 'honza/vim-snippets'
+
 call plug#end()
 
 filetype plugin indent on
 
 "Eneble python
-let g:python3_host_prog='/home/serge/.virtualenvs/neovim/bin/python'
+let g:python3_host_prog=$HOME . '/.virtualenvs/neovim/bin/python'
 
 
 "Editing
@@ -72,7 +76,7 @@ set mouse=
 
 
 "Key Bindings
-let mapleader = " "
+let mapleader=' '
 nnoremap ; :
 
 nnoremap <Leader>w/ <C-w>v
@@ -83,12 +87,16 @@ nnoremap <Leader>wj <C-w><C-j>
 nnoremap <Leader>wk <C-w><C-k>
 nnoremap <Leader>wl <C-w><C-l>
 
+
 " CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
 
 " surround.vim
 vmap s S
+
+" Snippets
+let g:UltiSnipsExpandTrigger='<CR>'
 
 
 " Plugins
@@ -99,8 +107,5 @@ let g:airline_theme='base16_default'
 autocmd! BufWritePost * Neomake
 
 " VIM Table Mode
-let g:table_mode_corner_corner="+"
-let g:table_mode_header_fillchar="="
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
