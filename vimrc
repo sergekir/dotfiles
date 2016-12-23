@@ -96,7 +96,8 @@ let g:ctrlp_cmd='CtrlP'
 vmap s S
 
 " Snippets
-let g:UltiSnipsExpandTrigger='<CR>'
+let g:UltiSnipsExpandTrigger='<c-s>'
+hi MatchParen cterm=none ctermbg=Black ctermfg=LightGray
 
 
 " Plugins
