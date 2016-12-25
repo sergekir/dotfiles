@@ -36,6 +36,12 @@ Plug 'SirVer/ultisnips'
 
 Plug 'honza/vim-snippets'
 
+Plug 'luochen1990/rainbow'
+
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'hynek/vim-python-pep8-indent'
+
 call plug#end()
 
 filetype plugin indent on
@@ -67,6 +73,8 @@ set scrolloff=5
 
 let base16colorspace=256
 colorscheme base16-tomorrow-night
+hi MatchParen cterm=none ctermbg=Black ctermfg=LightGray
+hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
@@ -79,6 +87,7 @@ set mouse=
 let mapleader=' '
 nnoremap ; :
 
+" Window navigation
 nnoremap <Leader>w/ <C-w>v
 nnoremap <Leader>w- <C-w>s
 
@@ -86,6 +95,7 @@ nnoremap <Leader>wh <C-w><C-h>
 nnoremap <Leader>wj <C-w><C-j>
 nnoremap <Leader>wk <C-w><C-k>
 nnoremap <Leader>wl <C-w><C-l>
+nnoremap <Leader>ww <C-w>w
 
 
 " CtrlP
@@ -97,7 +107,12 @@ vmap s S
 
 " Snippets
 let g:UltiSnipsExpandTrigger='<c-s>'
-hi MatchParen cterm=none ctermbg=Black ctermfg=LightGray
+
+" Nerd Commenter
+nmap <Leader>cp <Leader>cyp
+nmap <Leader>cP <Leader>cyP
+vmap <Leader>cp <Leader>cyp
+vmap <Leader>cP <Leader>cyP
 
 
 " Plugins
@@ -106,6 +121,9 @@ hi MatchParen cterm=none ctermbg=Black ctermfg=LightGray
 set laststatus=2
 let g:airline_theme='base16_default'
 autocmd! BufWritePost * Neomake
+
+" Rainbow
+let g:rainbow_active = 1
 
 " VIM Table Mode
 let g:table_mode_corner_corner='+'
