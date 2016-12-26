@@ -80,3 +80,5 @@ Switch to vim-like shortcuts
 ### Font: Source Code Pro
 
 `https://github.com/adobe-fonts/source-code-pro`
+
+Terminal font: Source Code Pro Medium 12.6

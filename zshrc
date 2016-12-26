@@ -7,6 +7,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 alias vim="nvim"
+alias ppwd='export PYTHONPATH=$("pwd")'
 
 export EDITOR=nvim
 

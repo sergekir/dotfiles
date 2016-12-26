@@ -73,7 +73,7 @@ set scrolloff=5
 
 let base16colorspace=256
 colorscheme base16-tomorrow-night
-hi MatchParen cterm=none ctermbg=Black ctermfg=LightGray
+hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
