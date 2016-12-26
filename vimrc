@@ -128,3 +128,7 @@ let g:rainbow_active = 1
 " VIM Table Mode
 let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
+
+" You Complete Me
+let g:ycm_autoclose_preview_window_after_completion = 1
+
