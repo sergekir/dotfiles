@@ -51,11 +51,11 @@ let g:python3_host_prog=$HOME . '/.virtualenvs/neovim/bin/python'
 
 
 "Editing
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
 set autoindent
+
+autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype djangohtml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -124,6 +124,14 @@ autocmd! BufWritePost * Neomake
 
 " Rainbow
 let g:rainbow_active = 1
+let g:rainbow_conf = {
+\'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\'separately': {
+\'htmldjango': 0,
+\'html': 0,
+\'xml': 0,
+\}
+\}
 
 " VIM Table Mode
 let g:table_mode_corner_corner='+'

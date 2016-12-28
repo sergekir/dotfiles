@@ -65,7 +65,10 @@ Work with shortcuts and format status line
 
 ### ranger
 
-`pip install git+https://github.com/ranger/ranger.git/#egg=ranger`
+```
+pip install git+https://github.com/ranger/ranger.git/#egg=ranger
+apt install caca-utils highlight atool w3m poppler-utils mediainfo
+```
 
 ### mocp
 
