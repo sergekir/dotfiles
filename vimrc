@@ -111,7 +111,7 @@ let g:UltiSnipsExpandTrigger='<c-s>'
 " Nerd Commenter
 nmap <Leader>cp <Leader>cyp
 nmap <Leader>cP <Leader>cyP
-vmap <Leader>cp <Leader>cyp
+vmap <Leader>cp <Leader>cy`>p
 vmap <Leader>cP <Leader>cyP
 
 
