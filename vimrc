@@ -115,7 +115,7 @@ vmap <Leader>cp <Leader>cy`>p
 vmap <Leader>cP <Leader>cyP
 
 
-" Plugins
+" Plugin settings
 
 " Airline
 set laststatus=2
@@ -125,7 +125,7 @@ autocmd! BufWritePost * Neomake
 " Rainbow
 let g:rainbow_active = 1
 let g:rainbow_conf = {
-\'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\'ctermfgs': ['21', '03', '17', '02'],
 \'separately': {
 \'htmldjango': 0,
 \'html': 0,
