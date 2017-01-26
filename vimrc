@@ -85,7 +85,8 @@ set mouse=
 
 "Key Bindings
 let mapleader=' '
-nnoremap ; :
+nnoremap ; q:i
+nnoremap : q:i
 
 " Window navigation
 nnoremap <Leader>w/ <C-w>v
