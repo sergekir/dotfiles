@@ -1,5 +1,6 @@
 "Config
 set nocompatible
+set noswapfile
 filetype off
 
 
