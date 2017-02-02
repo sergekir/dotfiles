@@ -103,6 +103,7 @@ nnoremap <Leader>ww <C-w>w
 " CtrlP
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
+set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules
 
 " surround.vim
 vmap s S
