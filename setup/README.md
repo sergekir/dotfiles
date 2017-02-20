@@ -10,7 +10,7 @@ Browser: `https://vivaldi.com`
 
 Theme: `http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme`
 
-Icons: `wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/install-papirus-home-gtk.sh | sh`
+Icons: `sudo add-apt-repository ppa:papirus/papirus && sudo apt update && sudo apt install papirus-icon-theme`
 
 
 ## Keyboard shortcuts
