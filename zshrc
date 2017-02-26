@@ -11,6 +11,7 @@ alias vim="nvim"
 alias ppwd='export PYTHONPATH=$("pwd")'
 alias djcov="coverage run --source='.' manage.py test ; coverage html"
 alias pipo="pip list -o --format=columns"
+alias moc="mocp"
 
 export EDITOR=nvim
 

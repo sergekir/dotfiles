@@ -43,8 +43,6 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'hynek/vim-python-pep8-indent'
 
-Plug 'posva/vim-vue'
-
 call plug#end()
 
 filetype plugin indent on
