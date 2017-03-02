@@ -43,6 +43,10 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'hynek/vim-python-pep8-indent'
 
+Plug 'pangloss/vim-javascript'
+
+Plug 'mxw/vim-jsx'
+
 call plug#end()
 
 filetype plugin indent on
@@ -144,3 +148,5 @@ let g:table_mode_header_fillchar='='
 " You Complete Me
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" JSX
+let g:jsx_ext_required = 0
