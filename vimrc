@@ -78,7 +78,7 @@ set cursorline
 set scrolloff=5
 
 let base16colorspace=256
-colorscheme base16-tomorrow-night
+colorscheme base16-default-dark
 hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 
@@ -127,7 +127,7 @@ vmap <Leader>cP <Leader>cyP
 
 " Airline
 set laststatus=2
-let g:airline_theme='base16_default'
+let g:airline_theme='base16'
 autocmd! BufWritePost * Neomake
 
 " Rainbow
@@ -147,6 +147,7 @@ let g:table_mode_header_fillchar='='
 
 " You Complete Me
 let g:ycm_autoclose_preview_window_after_completion = 1
+nnoremap <leader>gg :YcmCompleter GoTo<CR>
 
 " JSX
 let g:jsx_ext_required = 0
