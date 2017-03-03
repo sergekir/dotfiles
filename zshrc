@@ -9,7 +9,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 alias vim="nvim"
 alias ppwd='export PYTHONPATH=$("pwd")'
-alias djcov="coverage run --source='.' manage.py test ; coverage html"
+alias djcov="coverage run --source='.' manage.py test; coverage html; xdg-open ./htmlcov/index.html"
 alias pipo="pip list -o --format=columns"
 alias moc="mocp"
 
