@@ -106,6 +106,12 @@ nnoremap <Leader>wk <C-w><C-k>
 nnoremap <Leader>wl <C-w><C-l>
 nnoremap <Leader>ww <C-w>w
 
+" Buffer navigation
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>bd :bdelete<CR>
+nnoremap <Leader>bb :buffers<CR>:b<Space>
+
 
 " CtrlP
 let g:ctrlp_map='<c-p>'
@@ -131,6 +137,9 @@ vmap <Leader>cP <Leader>cyP
 " Airline
 set laststatus=2
 let g:airline_theme='base16'
+let g:airline#extensions#virtualenv#enabled = 0
+let g:airline_section_y = 0
+let g:airline_section_x = ''
 autocmd! BufWritePost * Neomake
 
 " Rainbow
