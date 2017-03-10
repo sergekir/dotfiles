@@ -110,12 +110,13 @@ nnoremap <Leader>ww <C-w>w
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bd :bdelete<CR>
-nnoremap <Leader>bb :buffers<CR>:b<Space>
 
 
 " CtrlP
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
+nnoremap <Leader>bb :CtrlPBuffer<CR>
+nnoremap <Leader>ff :CtrlP<CR>
 set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules
 
 " surround.vim
