@@ -13,6 +13,8 @@ alias ppwd='export PYTHONPATH=$("pwd")'
 alias djcov="coverage run --source='.' manage.py test && coverage html && xdg-open ./htmlcov/index.html"
 alias pipo="pip list -o --format=columns"
 alias moc="mocp"
+# ranger quit to opened dir
+alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
 
 export EDITOR=nvim
 
