@@ -33,9 +33,9 @@ Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 
 Plug 'luochen1990/rainbow'
 
@@ -111,6 +111,9 @@ nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bd :bdelete<CR>
 
+" Files
+nnoremap <Leader>fs :update<CR>
+
 
 " CtrlP
 let g:ctrlp_map='<c-p>'
@@ -124,7 +127,7 @@ vmap s S
 
 " Snippets
 let g:UltiSnipsExpandTrigger='<c-s>'
-autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
+"autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
 
 " Nerd Commenter
 nmap <Leader>cp <Leader>cyp
