@@ -7,10 +7,6 @@ filetype off
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'scrooloose/nerdtree'
-
-Plug 'tpope/vim-fugitive'
-
 Plug 'neomake/neomake'
 
 Plug 'tpope/vim-surround'
@@ -33,9 +29,9 @@ Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'jiangmiao/auto-pairs'
 
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
-"Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 Plug 'luochen1990/rainbow'
 
@@ -45,7 +41,7 @@ Plug 'hynek/vim-python-pep8-indent'
 
 Plug 'pangloss/vim-javascript'
 
-Plug 'mxw/vim-jsx'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -127,7 +123,6 @@ vmap s S
 
 " Snippets
 let g:UltiSnipsExpandTrigger='<c-s>'
-"autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
 
 " Nerd Commenter
 nmap <Leader>cp <Leader>cyp
@@ -164,6 +159,3 @@ let g:table_mode_header_fillchar='='
 " You Complete Me
 let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
-
-" JSX
-let g:jsx_ext_required = 0
