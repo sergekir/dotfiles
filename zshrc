@@ -27,3 +27,23 @@ base16_gruvbox-dark-medium
 WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Key bindings
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'l' vi-forward-char
+
+# vim shortcuts for normal mode
+function split_h {
+    tmux split-window -h -c $(pwd)
+}
+zle -N split_h
+
+function split_v {
+    tmux split-window -v -c $(pwd)
+}
+zle -N split_v
+
+bindkey -M vicmd ' w/' split_h
+bindkey -M vicmd ' w-' split_v
