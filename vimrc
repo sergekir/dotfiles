@@ -60,6 +60,7 @@ autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype scss setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype markdown setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -79,6 +80,7 @@ let base16colorspace=256
 colorscheme base16-default-dark
 hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
+hi Comment cterm=none ctermbg=18 ctermfg=LightGray
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
@@ -159,3 +161,5 @@ let g:table_mode_header_fillchar='='
 " You Complete Me
 let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
+"
+" autocmd! UltiSnips_AutoTrigger
