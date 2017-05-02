@@ -82,8 +82,6 @@ hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 hi Comment cterm=none ctermbg=18 ctermfg=LightGray
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 set splitbelow
 set splitright
 set mouse=
