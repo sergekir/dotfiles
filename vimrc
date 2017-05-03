@@ -139,7 +139,19 @@ let g:airline_theme='base16'
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline_section_y = 0
 let g:airline_section_x = ''
-autocmd! BufWritePost * Neomake
+let g:airline_mode_map = {
+\ '__' : '-',
+\ 'n'  : 'N',
+\ 'i'  : 'I',
+\ 'R'  : 'R',
+\ 'c'  : 'C',
+\ 'v'  : 'V',
+\ 'V'  : 'V',
+\ '' : 'V',
+\ 's'  : 'S',
+\ 'S'  : 'S',
+\ '' : 'S',
+\ }
 
 " Rainbow
 let g:rainbow_active = 1
@@ -161,3 +173,4 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
 "
 " autocmd! UltiSnips_AutoTrigger
+autocmd! BufWritePost * Neomake
