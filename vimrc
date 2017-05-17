@@ -11,6 +11,8 @@ Plug 'neomake/neomake'
 
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'vim-airline/vim-airline'
