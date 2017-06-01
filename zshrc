@@ -23,6 +23,7 @@ alias moc="mocp"
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 # ranger quit to opened dir
 alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
+alias pretty_json='python -m json.tool'
 
 export EDITOR=nvim
 
