@@ -64,6 +64,7 @@ autocmd Filetype scss setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype markdown setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype json setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype rst setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -119,7 +120,7 @@ let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 nnoremap <Leader>bb :CtrlPBuffer<CR>
 nnoremap <Leader>ff :CtrlP<CR>
-set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules
+set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules,build/*
 
 " surround.vim
 vmap s S
