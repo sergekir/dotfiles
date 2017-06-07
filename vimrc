@@ -45,6 +45,8 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'posva/vim-vue'
 
+Plug 'chr4/nginx.vim'
+
 call plug#end()
 
 filetype plugin indent on
@@ -74,6 +76,7 @@ syntax enable
 
 set relativenumber
 set number
+set nowrap
 
 set showmatch
 set hlsearch
