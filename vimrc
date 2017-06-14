@@ -178,6 +178,7 @@ let g:table_mode_header_fillchar='='
 " You Complete Me
 let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
-"
+nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+
 " autocmd! UltiSnips_AutoTrigger
 autocmd! BufWritePost * Neomake
