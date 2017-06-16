@@ -67,6 +67,7 @@ autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype markdown setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype json setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype rst setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype nginx setlocal ts=4 sw=4 sts=4 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -98,6 +99,7 @@ set mouse=
 let mapleader=' '
 nnoremap ; q:i
 nnoremap : q:i
+inoremap <c-l> <c-^>
 
 " Window navigation
 nnoremap <Leader>w/ <C-w>v
