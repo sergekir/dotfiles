@@ -14,16 +14,25 @@ plugins=(git vi-mode virtualenv virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# Aliases
 alias vim="nvim"
 alias vi="nvim"
+alias moc="mocp"
+
+# ranger quit to opened dir
+alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
+
+# python
 alias ppwd='export PYTHONPATH=$("pwd")'
 alias djcov="coverage run --source='.' manage.py test && coverage html && xdg-open ./htmlcov/index.html"
 alias pipo="pip list -o --format=columns"
-alias moc="mocp"
-alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
-# ranger quit to opened dir
-alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
 alias pretty_json='python -m json.tool'
+alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
+
+# docker
+alias docker-stop-all='sudo docker stop $(sudo docker ps -q)'
+
 
 export EDITOR=nvim
 
