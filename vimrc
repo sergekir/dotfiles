@@ -47,6 +47,10 @@ Plug 'posva/vim-vue'
 
 Plug 'chr4/nginx.vim'
 
+Plug 'godlygeek/tabular'
+
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
 
 filetype plugin indent on
@@ -182,5 +186,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 
-" autocmd! UltiSnips_AutoTrigger
+" Vim Markdown
+let g:vim_markdown_folding_disabled = 1
+
+" Neomake
 autocmd! BufWritePost * Neomake
