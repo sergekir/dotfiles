@@ -8,7 +8,8 @@ ShowFormat = no
 
 ShowTime = yes
 
-Theme = transparent-background
+# Theme
+Theme = base16
 
 Layout1 = directory(0,0,100%,100%)
 
