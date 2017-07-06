@@ -51,6 +51,8 @@ Plug 'godlygeek/tabular'
 
 Plug 'plasticboy/vim-markdown'
 
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 
 filetype plugin indent on
@@ -190,3 +192,7 @@ let g:vim_markdown_folding_disabled = 1
 
 " Neomake
 autocmd! BufWritePost * Neomake
+
+" NERD Tree
+map <leader>ft :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
