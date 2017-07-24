@@ -31,7 +31,7 @@ alias pretty_json='python -m json.tool'
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 
 # docker
-alias docker-stop-all='sudo docker stop $(sudo docker ps -q)'
+alias docker-stop-all='docker stop $(docker ps -q)'
 
 
 export EDITOR=nvim
@@ -39,7 +39,7 @@ export EDITOR=nvim
 # Theme
 BASE16_SHELL=$HOME/.tools/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-base16_gruvbox-dark-medium
+base16_eighties
 
 # Key bindings
 bindkey -M menuselect 'j' vi-down-line-or-history
