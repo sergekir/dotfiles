@@ -21,7 +21,7 @@ alias vi="nvim"
 alias moc="mocp"
 
 # ranger quit to opened dir
-alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
+alias ranger=". ranger"
 
 # python
 alias ppwd='export PYTHONPATH=$("pwd")'
