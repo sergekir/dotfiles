@@ -53,6 +53,10 @@ Plug 'plasticboy/vim-markdown'
 
 Plug 'scrooloose/nerdtree'
 
+Plug 'tpope/vim-eunuch'
+
+Plug 'hecal3/vim-leader-guide'
+
 call plug#end()
 
 filetype plugin indent on
@@ -196,3 +200,11 @@ autocmd! BufWritePost * Neomake
 " NERD Tree
 map <leader>ft :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Vim Leader Guide
+let g:lmap =  {}
+let g:lmap.f = { 'name' : 'File Menu' }
+
+call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
+nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
