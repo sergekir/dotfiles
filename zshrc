@@ -9,7 +9,7 @@ export ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
 
 ZSH_THEME="serpent"
 DISABLE_AUTO_UPDATE="true"
-plugins=(git vi-mode virtualenv virtualenvwrapper)
+plugins=(git gitignore docker docker-compose django vi-mode virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
