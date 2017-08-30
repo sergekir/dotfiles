@@ -156,6 +156,7 @@ vmap <Leader>cP <Leader>cyP
 set laststatus=2
 let g:airline_theme='base16'
 let g:airline#extensions#virtualenv#enabled = 0
+let g:airline#extensions#keymap#enabled = 0
 let g:airline_section_y = 0
 let g:airline_section_x = ''
 let g:airline_mode_map = {
