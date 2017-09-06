@@ -15,6 +15,7 @@ plugins=(
     docker
     docker-compose
     django
+    httpie
     vi-mode
     virtualenv
     virtualenvwrapper
