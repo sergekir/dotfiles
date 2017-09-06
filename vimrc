@@ -57,6 +57,8 @@ Plug 'tpope/vim-eunuch'
 
 Plug 'hecal3/vim-leader-guide'
 
+Plug 'kylef/apiblueprint.vim'
+
 call plug#end()
 
 filetype plugin indent on
