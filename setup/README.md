@@ -15,7 +15,11 @@ Icons: `sudo add-apt-repository ppa:papirus/papirus && sudo apt update && sudo a
 
 ## Keyboard shortcuts
 
-Change `Caps Lock` to `Escape`: `/usr/bin/setxkbmap -option "caps:escape"`
+Change `Caps Lock` to `Escape`:
+
+`/etc/default/keyboard`
+
+edit `XKBOPTIONS="grp:ctrl_shift_toggle,grp_led:scroll,caps:escape"`
 
 ## Editor
 
@@ -50,6 +54,10 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 ### Graphics
 
 `blender inkscape gimp`
+
+### Books
+
+`https://calibre-ebook.com/download_linux`
 
 ## Terminal
 
