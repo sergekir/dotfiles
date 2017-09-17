@@ -41,10 +41,6 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'hynek/vim-python-pep8-indent'
 
-Plug 'pangloss/vim-javascript'
-
-Plug 'posva/vim-vue'
-
 Plug 'chr4/nginx.vim'
 
 Plug 'godlygeek/tabular'
@@ -208,6 +204,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:lmap =  {}
 let g:lmap.f = { 'name' : 'File Menu' }
 
+" Vim Leader Guide
 call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
