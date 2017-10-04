@@ -1,4 +1,4 @@
-"Config
+" Config
 set nocompatible
 set noswapfile
 filetype off
@@ -54,6 +54,10 @@ Plug 'tpope/vim-eunuch'
 Plug 'hecal3/vim-leader-guide'
 
 Plug 'kylef/apiblueprint.vim'
+
+Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
+
+Plug 'fisadev/vim-isort'
 
 call plug#end()
 
@@ -208,3 +212,9 @@ let g:lmap.f = { 'name' : 'File Menu' }
 call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
+
+" yapf
+nnoremap <leader>pf :call yapf#YAPF()<CR>
+
+" isort
+nnoremap <leader>pi :Isort<CR>
