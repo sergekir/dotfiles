@@ -1,5 +1,8 @@
+# Path
+PATH=$HOME/.local/bin:$PATH
+
 # Virtualenv
-WORKON_HOME=$HOME/.virtualenvs
+WORKON_HOME=$HOME/virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -70,3 +73,15 @@ zle -N split_v
 
 bindkey -M vicmd ' w/' split_h
 bindkey -M vicmd ' w-' split_v
+
+# Start or attach to Tmux
+if [[ -z "$TMUX" ]]
+then
+    ID="`tmux ls | grep -vm1 attached | cut -d: -f1`"
+    if [[ -z "$ID" ]]
+    then
+        tmux new-session
+    else
+        tmux attach-session -t "$ID"
+    fi
+fi
