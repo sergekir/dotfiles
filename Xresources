@@ -1,3 +1,4 @@
+! xrdb -merge ~/.Xresources
 Xft.antialias: true
 
 URxvt.font: xft:IBM Plex Mono Text:medium:pixelsize=16
