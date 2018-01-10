@@ -39,6 +39,7 @@ alias djcov="coverage run --source='.' manage.py test && coverage html && xdg-op
 alias pipo="pip list -o --format=columns"
 alias pretty_json='python -m json.tool'
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
+alias gitignore_init="gi python vim > .gitignore"
 
 # docker
 alias docker-stop-all='docker stop $(docker ps -q)'

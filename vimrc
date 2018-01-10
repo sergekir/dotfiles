@@ -59,6 +59,8 @@ Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 Plug 'fisadev/vim-isort'
 
+Plug 'chrisbra/csv.vim'
+
 call plug#end()
 
 filetype plugin indent on
@@ -137,7 +139,7 @@ let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 nnoremap <Leader>bb :CtrlPBuffer<CR>
 nnoremap <Leader>ff :CtrlP<CR>
-set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules,*/build/*
+set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules,*/build/*,*/media/*,*/static/*
 
 " surround.vim
 vmap s S
