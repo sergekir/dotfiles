@@ -66,7 +66,7 @@ call plug#end()
 filetype plugin indent on
 
 "Eneble python
-let g:python3_host_prog=$HOME . '/.virtualenvs/neovim/bin/python'
+let g:python3_host_prog=$HOME . '/virtualenvs/neovim/bin/python'
 
 
 "Editing
@@ -82,6 +82,7 @@ autocmd Filetype markdown setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype json setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype rst setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype nginx setlocal ts=4 sw=4 sts=4 expandtab
+autocmd Filetype apiblueprint setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -158,6 +159,7 @@ vmap <Leader>cP <Leader>cyP
 
 " Airline
 set laststatus=2
+let g:airline_symbols_ascii = 1
 let g:airline_theme='base16'
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#keymap#enabled = 0

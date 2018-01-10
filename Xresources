@@ -1,0 +1,9 @@
+! xrdb -merge ~/.Xresources
+Xft.antialias: true
+
+URxvt.font: xft:IBM Plex Mono Text:medium:pixelsize=16
+URxvt.buffered: false
+URxvt.cursorBlink: true
+URxvt.borderless: true
+URxvt.scrollBar: false
+URxvt.internalBorder: 0
