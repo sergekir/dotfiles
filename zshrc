@@ -66,3 +66,13 @@ then
         tmux attach-session -t "$ID"
     fi
 fi
+
+# Pipenv
+# compdef pipenv
+_pipenv() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _PIPENV_COMPLETE=complete-zsh  pipenv)
+}
+if [[ "$(basename ${(%):-%x})" != "_pipenv" ]]; then
+  autoload -U compinit && compinit
+  compdef _pipenv pipenv
+fi

@@ -7,7 +7,9 @@ filetype off
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'neomake/neomake'
+Plug 'Valloric/YouCompleteMe'
+
+Plug 'zchee/deoplete-jedi'
 
 Plug 'tpope/vim-surround'
 
@@ -20,8 +22,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'airblade/vim-gitgutter'
-
-Plug 'valloric/youcompleteme'
 
 Plug 'easymotion/vim-easymotion'
 
@@ -159,7 +159,6 @@ vmap <Leader>cP <Leader>cyP
 
 " Airline
 set laststatus=2
-let g:airline_symbols_ascii = 1
 let g:airline_theme='base16'
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#keymap#enabled = 0
@@ -194,15 +193,15 @@ let g:rainbow_conf = {
 let g:table_mode_corner='|'
 
 " You Complete Me
-let g:ycm_autoclose_preview_window_after_completion = 1
-nnoremap <leader>gg :YcmCompleter GoTo<CR>
-nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"nnoremap <leader>gg :YcmCompleter GoTo<CR>
+"nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Vim Markdown
 let g:vim_markdown_folding_disabled = 1
-
-" Neomake
-autocmd! BufWritePost * Neomake
 
 " NERD Tree
 map <leader>ft :NERDTreeToggle<CR>
@@ -222,3 +221,7 @@ nnoremap <leader>pf :call yapf#YAPF()<CR>
 
 " isort
 nnoremap <leader>pi :Isort<CR>
+
+" ale
+let g:ale_sign_error = '!'
+let g:ale_sign_warning = '?'

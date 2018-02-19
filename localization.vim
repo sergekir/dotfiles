@@ -1,3 +1,5 @@
+" save it to after/plugin/
+
 function RusKeymap()
     setlocal keymap=russian-jcukenwin
     setlocal iminsert=0
