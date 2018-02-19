@@ -7,9 +7,9 @@ filetype off
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'Valloric/YouCompleteMe'
+Plug 'neomake/neomake'
 
-Plug 'zchee/deoplete-jedi'
+Plug 'Valloric/YouCompleteMe'
 
 Plug 'tpope/vim-surround'
 
@@ -193,12 +193,9 @@ let g:rainbow_conf = {
 let g:table_mode_corner='|'
 
 " You Complete Me
-"let g:ycm_autoclose_preview_window_after_completion = 1
-"nnoremap <leader>gg :YcmCompleter GoTo<CR>
-"nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+nnoremap <leader>gg :YcmCompleter GoTo<CR>
+nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 
 " Vim Markdown
 let g:vim_markdown_folding_disabled = 1
@@ -206,6 +203,9 @@ let g:vim_markdown_folding_disabled = 1
 " NERD Tree
 map <leader>ft :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Neomake
+autocmd! BufWritePost * Neomake
 
 " Vim Leader Guide
 let g:lmap =  {}
@@ -221,7 +221,3 @@ nnoremap <leader>pf :call yapf#YAPF()<CR>
 
 " isort
 nnoremap <leader>pi :Isort<CR>
-
-" ale
-let g:ale_sign_error = '!'
-let g:ale_sign_warning = '?'
