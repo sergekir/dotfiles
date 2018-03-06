@@ -61,6 +61,8 @@ Plug 'fisadev/vim-isort'
 
 Plug 'chrisbra/csv.vim'
 
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 
 filetype plugin indent on
