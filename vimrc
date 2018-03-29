@@ -115,6 +115,8 @@ set splitbelow
 set splitright
 set mouse=
 
+set noshowmode
+
 
 "Key Bindings
 let mapleader=' '
