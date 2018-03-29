@@ -67,6 +67,10 @@ call plug#end()
 
 filetype plugin indent on
 
+"Spelling
+
+set spell spelllang=en,ru
+
 "Eneble python
 let g:python3_host_prog=$HOME . '/virtualenvs/neovim/bin/python'
 
