@@ -71,7 +71,7 @@ filetype plugin indent on
 
 set spell spelllang=en,ru
 
-"Eneble python
+"Enable python
 let g:python3_host_prog=$HOME . '/virtualenvs/neovim/bin/python'
 
 
@@ -168,6 +168,7 @@ set laststatus=2
 let g:airline_theme='base16'
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#keymap#enabled = 0
+let g:airline_detect_spell = 0
 let g:airline_section_y = 0
 let g:airline_section_x = ''
 let g:airline_mode_map = {
