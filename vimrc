@@ -63,6 +63,8 @@ Plug 'chrisbra/csv.vim'
 
 Plug 'tpope/vim-repeat'
 
+Plug 'Shougo/echodoc'
+
 call plug#end()
 
 filetype plugin indent on
@@ -230,3 +232,6 @@ nnoremap <leader>pf :call yapf#YAPF()<CR>
 
 " isort
 nnoremap <leader>pi :Isort<CR>
+
+" Echodoc
+let g:echodoc#enable_at_startup = 1
