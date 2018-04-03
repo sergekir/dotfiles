@@ -17,6 +17,8 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'mileszs/ack.vim'
+
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
