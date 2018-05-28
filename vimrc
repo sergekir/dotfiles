@@ -57,8 +57,6 @@ Plug 'hecal3/vim-leader-guide'
 
 Plug 'kylef/apiblueprint.vim'
 
-Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
-
 Plug 'fisadev/vim-isort'
 
 Plug 'chrisbra/csv.vim'
@@ -66,6 +64,10 @@ Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-repeat'
 
 Plug 'Shougo/echodoc'
+
+Plug 'elzr/vim-json'
+
+Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 
@@ -146,7 +148,6 @@ nnoremap <Leader>bd :bdelete<CR>
 " Files
 nnoremap <Leader>fs :update<CR>
 
-
 " CtrlP
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
@@ -165,6 +166,9 @@ nmap <Leader>cp <Leader>cyp
 nmap <Leader>cP <Leader>cyP
 vmap <Leader>cp <Leader>cy`>p
 vmap <Leader>cP <Leader>cyP
+
+" vim-autoformat
+nnoremap <Leader>af :Autoformat<CR>
 
 
 " Plugin settings
@@ -228,9 +232,6 @@ let g:lmap.f = { 'name' : 'File Menu' }
 call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
-
-" yapf
-nnoremap <leader>pf :call yapf#YAPF()<CR>
 
 " isort
 nnoremap <leader>pi :Isort<CR>
