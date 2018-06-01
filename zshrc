@@ -6,6 +6,10 @@ WORKON_HOME=$HOME/virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 
+# PyEnv
+export PYENV_ROOT=$HOME/.tools/pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+
 # ZSH
 export ZSH=$HOME/.tools/oh-my-zsh
 export ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
@@ -19,8 +23,9 @@ plugins=(
     docker-compose
     django
     httpie
+    pipenv
+    pyenv
     vi-mode
-    virtualenv
     virtualenvwrapper
 )
 
@@ -32,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias vi="nvim"
 alias moc="mocp"
+alias ccat="pygmentize -g"
 
 # ranger quit to opened dir
 alias ranger=". ranger"
