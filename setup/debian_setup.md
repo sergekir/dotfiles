@@ -2,15 +2,14 @@ install testing
 select install utils
 
 # PPA
-sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo add-apt-repository -y ppa:git-core/ppa
-
+add-apt-repository -y ppa:neovim-ppa/stable
+add-apt-repository -y ppa:git-core/ppa
 
 # GUI and apps
 apt install -y lightdm lxde-core lxde-common lxsession lxsession-logout lxappearance
 
 # Terminal tools
-apt install -y sudo neovim zsh tmux moc git build-essential atool p7zip-full
+apt install -y sudo neovim zsh tmux moc git build-essential atool p7zip-full libbz2-dev libsqlite3-dev libreadline-dev
 
 # neovim
 

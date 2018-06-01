@@ -7,9 +7,9 @@ sudo apt autoclean
 
 nvim -c PlugUpgrade -c PlugUpdate -c qall
 
-packages=(pipenv pew ranger-fm httpie docker-compose glances[docker] legit yapf yamllint)
+packages=(pipenv pew ranger-fm httpie docker-compose glances[docker] legit yapf yamllint ipython tldr)
 for package in "${packages[@]}"
 do
     echo Upgrading $package
-    pipsi upgrade $package | grep -v "Requirement already up-to-date"
+    pipsi upgrade $package | grep -v "Requirement already up-to-date\|Requirement not upgraded as not directly required"
 done
