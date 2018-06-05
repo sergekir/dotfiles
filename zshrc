@@ -43,7 +43,6 @@ alias ccat="pygmentize -g"
 alias ranger=". ranger"
 
 # python
-alias ppwd='export PYTHONPATH=$("pwd")'
 alias djcov="coverage run --source='.' manage.py test && coverage html && xdg-open ./htmlcov/index.html"
 alias pipo="pip list -o --format=columns"
 alias pretty_json='python -m json.tool'
@@ -52,6 +51,7 @@ alias gitignore_init="gi python vim > .gitignore"
 
 # docker
 alias docker-stop-all='docker stop $(docker ps -q)'
+alias dcp='docker-compose push'
 
 
 export EDITOR=nvim
