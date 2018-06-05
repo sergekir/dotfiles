@@ -98,6 +98,12 @@ autocmd Filetype apiblueprint setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
+"Base16 theme
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 
 "Interface
 syntax enable
@@ -111,8 +117,6 @@ set hlsearch
 set cursorline
 set scrolloff=5
 
-let base16colorspace=256
-colorscheme base16-default-dark
 hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 hi Comment cterm=none ctermbg=18 ctermfg=LightGray
@@ -122,6 +126,7 @@ set splitright
 set mouse=
 
 set noshowmode
+
 
 
 "Key Bindings
