@@ -120,6 +120,7 @@ set scrolloff=5
 hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 hi Comment cterm=none ctermbg=18 ctermfg=LightGray
+hi SpellBad ctermbg=Black
 
 set splitbelow
 set splitright
