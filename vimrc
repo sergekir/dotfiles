@@ -121,6 +121,7 @@ hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
 hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
 hi Comment cterm=none ctermbg=18 ctermfg=LightGray
 hi SpellBad ctermbg=Black
+hi SpellCap ctermbg=Black
 
 set splitbelow
 set splitright
@@ -204,7 +205,6 @@ let g:airline_mode_map = {
 " Rainbow
 let g:rainbow_active = 1
 let g:rainbow_conf = {
-\'ctermfgs': ['21', '03', '17', '02'],
 \'separately': {
 \'htmldjango': 0,
 \'html': 0,
@@ -244,3 +244,6 @@ nnoremap <leader>pi :Isort<CR>
 
 " Echodoc
 let g:echodoc#enable_at_startup = 1
+
+" GitGutter
+autocmd BufWritePost * GitGutter

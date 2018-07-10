@@ -51,7 +51,7 @@ alias gitignore_init="gi python vim > .gitignore"
 
 # docker
 alias docker-stop-all='docker stop $(docker ps -q)'
-alias dcp='docker-compose push'
+alias dcpush='docker-compose push'
 
 
 export EDITOR=nvim
