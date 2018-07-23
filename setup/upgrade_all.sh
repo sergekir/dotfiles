@@ -11,5 +11,5 @@ packages=(pipenv pew ranger-fm httpie docker-compose glances[docker] legit yapf 
 for package in "${packages[@]}"
 do
     echo Upgrading $package
-    pipsi upgrade $package | grep -v "Requirement already up-to-date\|Requirement not upgraded as not directly required"
+    pipsi upgrade $package | grep -v "Requirement already\|Requirement not upgraded as not directly required"
 done
