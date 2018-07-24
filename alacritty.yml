@@ -21,7 +21,7 @@ font:
     family: IBM Plex Mono Medium
 
   bold:
-    family: IBM Plex Mono Medium
+    family: IBM Plex Mono SemiBold
     style: Bold
 
   italic:
