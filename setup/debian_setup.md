@@ -10,7 +10,7 @@ add-apt-repository -y ppa:git-core/ppa
 ## GUI and apps
 
 ```
-apt install -y lightdm lxde-core lxde-common lxsession lxsession-logout lxappearance
+apt install -y lightdm lxde-core lxde-common lxsession lxsession-logout lxappearance unifont
 ```
 
 ## Terminal tools
