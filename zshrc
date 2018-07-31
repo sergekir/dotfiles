@@ -33,6 +33,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# History settings
+setopt noincappendhistory
+setopt nosharehistory
+
 # Aliases
 alias vim="nvim"
 alias vi="nvim"
