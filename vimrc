@@ -219,6 +219,7 @@ let g:table_mode_corner='|'
 let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+let g:ycm_python_binary_path = 'python'
 
 " Vim Markdown
 let g:vim_markdown_folding_disabled = 1
