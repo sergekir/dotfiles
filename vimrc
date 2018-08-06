@@ -69,6 +69,8 @@ Plug 'elzr/vim-json'
 
 Plug 'Chiel92/vim-autoformat'
 
+Plug 'vim-python/python-syntax'
+
 call plug#end()
 
 filetype plugin indent on
@@ -250,3 +252,6 @@ let g:echodoc#enable_at_startup = 1
 
 " GitGutter
 autocmd BufWritePost * GitGutter
+
+" Python Syntax
+let g:python_highlight_all = 1
