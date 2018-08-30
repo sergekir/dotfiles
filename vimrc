@@ -71,6 +71,8 @@ Plug 'Chiel92/vim-autoformat'
 
 Plug 'vim-python/python-syntax'
 
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 
 filetype plugin indent on

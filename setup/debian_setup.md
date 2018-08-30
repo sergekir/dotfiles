@@ -16,7 +16,7 @@ apt install -y lightdm lxde-core lxde-common lxsession lxsession-logout lxappear
 ## Terminal tools
 
 ```
-apt install -y sudo neovim zsh tmux moc git build-essential atool p7zip-full libbz2-dev libsqlite3-dev libreadline-dev libffi-dev
+apt install -y sudo neovim zsh tmux moc git build-essential atool p7zip-full libbz2-dev libsqlite3-dev libreadline-dev libffi-dev tk-dev
 ```
 
 ## neovim
