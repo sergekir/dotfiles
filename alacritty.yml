@@ -10,7 +10,7 @@ window:
     x: 5
     y: 0
 
-  decorations: true
+  decorations: none
 
 tabspaces: 8
 
