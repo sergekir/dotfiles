@@ -49,6 +49,7 @@ alias ranger=". ranger"
 # python
 alias djcov="coverage run --source='.' manage.py test && coverage html && xdg-open ./htmlcov/index.html"
 alias pipo="pip list -o --format=columns"
+alias pipu="pip install --upgrade pip setuptools wheel"
 alias pretty_json='python -m json.tool'
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 alias gitignore_init="gi python vim > .gitignore"
