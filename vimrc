@@ -77,6 +77,8 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 
 Plug 'cespare/vim-toml'
 
+Plug 'jceb/vim-orgmode'
+
 call plug#end()
 
 filetype plugin indent on
@@ -105,6 +107,8 @@ autocmd Filetype nginx setlocal ts=4 sw=4 sts=4 expandtab
 autocmd Filetype apiblueprint setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype jinja setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype toml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype perl setlocal ts=4 sw=4 sts=4 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
 
