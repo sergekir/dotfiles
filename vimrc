@@ -2,125 +2,118 @@
 set nocompatible
 set noswapfile
 filetype off
+set clipboard=unnamed
 
 
-"Plugins
+" Plugins
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'chiel92/vim-autoformat'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'easymotion/vim-easymotion'
+Plug 'fisadev/vim-isort'
+Plug 'godlygeek/tabular'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'honza/vim-snippets'
+Plug 'jiangmiao/auto-pairs'
+Plug 'liuchengxu/vim-which-key'
+Plug 'majutsushi/tagbar'
 Plug 'neomake/neomake'
-
-Plug 'Valloric/YouCompleteMe'
-
+Plug 'preservim/nerdcommenter'
+Plug 'sirver/ultisnips'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vimjas/vim-python-pep8-indent'
+Plug 'ahmedkhalf/lsp-rooter.nvim'
+Plug 'p00f/nvim-ts-rainbow'
 
+" Libraries
+Plug 'nvim-lua/plenary.nvim'
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+" Git
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 
-Plug 'ctrlpvim/ctrlp.vim'
+" TreeSitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'mileszs/ack.vim'
-
-Plug 'vim-airline/vim-airline'
-
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'airblade/vim-gitgutter'
-
-Plug 'easymotion/vim-easymotion'
-
+" Themes
 Plug 'chriskempson/base16-vim'
 
-Plug 'dhruvasagar/vim-table-mode'
+" Spelling
+Plug 'kamykn/spelunker.vim'
 
-Plug 'jiangmiao/auto-pairs'
-
-Plug 'SirVer/ultisnips'
-
-Plug 'honza/vim-snippets'
-
-Plug 'luochen1990/rainbow'
-
-Plug 'scrooloose/nerdcommenter'
-
-Plug 'hynek/vim-python-pep8-indent'
-
-Plug 'chr4/nginx.vim'
-
-Plug 'godlygeek/tabular'
-
-Plug 'plasticboy/vim-markdown'
-
-Plug 'scrooloose/nerdtree'
-
-Plug 'tpope/vim-eunuch'
-
-Plug 'hecal3/vim-leader-guide'
-
-Plug 'kylef/apiblueprint.vim'
-
-Plug 'fisadev/vim-isort'
-
-Plug 'chrisbra/csv.vim'
-
-Plug 'tpope/vim-repeat'
-
-Plug 'Shougo/echodoc'
-
-Plug 'elzr/vim-json'
-
-Plug 'Chiel92/vim-autoformat'
-
-Plug 'vim-python/python-syntax'
-
-Plug 'leafgarland/typescript-vim'
-
-Plug 'Glench/Vim-Jinja2-Syntax'
-
+" Syntax and Languages
+Plug 'aklt/plantuml-syntax'
 Plug 'cespare/vim-toml'
-
-Plug 'jceb/vim-orgmode'
+Plug 'chr4/nginx.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'glench/vim-jinja2-syntax'
+Plug 'martinda/jenkinsfile-vim-syntax'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
 filetype plugin indent on
 
-"Spelling
-
-set spell spelllang=en,ru
-
-"Enable python
-let g:python3_host_prog=$HOME . '/virtualenvs/neovim/bin/python'
+"Disable python 2
+let g:loaded_python_provider = 0
+let g:python3_host_prog='/home/linuxbrew/.linuxbrew/bin/python3'
 
 
 "Editing
 set autoindent
+set autoread
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
 
+autocmd Filetype dockerfile setlocal ts=4 sw=4 sts=4 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype htmldjango setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype jenkins setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype jinja setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype json setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype markdown setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype nginx setlocal ts=4 sw=4 sts=4 expandtab
+autocmd Filetype perl setlocal ts=4 sw=4 sts=4 expandtab
+autocmd Filetype plantuml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype rst setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype scss setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype markdown setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype json setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype rst setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype nginx setlocal ts=4 sw=4 sts=4 expandtab
-autocmd Filetype apiblueprint setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype jinja setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype sh setlocal ts=4 sw=4 sts=4 expandtab
 autocmd Filetype toml setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype perl setlocal ts=4 sw=4 sts=4 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype lua setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype vim setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd BufWritePre * %s/\s\+$//e
+autocmd FileType * set formatoptions-=cro
 
-"Base16 theme
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+" Theme
+set termguicolors
+let base16colorspace=256
+colorscheme base16-eighties
+let g:airline_theme = 'base16_eighties'
 
 
 "Interface
-syntax enable
 
 set relativenumber
 set number
@@ -131,24 +124,28 @@ set hlsearch
 set cursorline
 set scrolloff=5
 
-hi MatchParen cterm=none ctermbg=19 ctermfg=LightGray
-hi VertSplit cterm=none ctermbg=18 ctermfg=LightGray
-hi Comment cterm=none ctermbg=18 ctermfg=LightGray
-hi SpellBad ctermbg=Black
-hi SpellCap ctermbg=Black
-
 set splitbelow
 set splitright
 set mouse=
 
 set noshowmode
 
+syntax on
+
+" Spelling
+set spelllang=en,ru
+hi SpellBad ctermbg=Black
+hi SpellCap ctermbg=Black
+set nospell
 
 
 "Key Bindings
+
 let mapleader=' '
+let maplocalleader=' '
 nnoremap ; q:i
 nnoremap : q:i
+vnoremap ; q:i
 inoremap <c-l> <c-^>
 
 " Window navigation
@@ -169,12 +166,15 @@ nnoremap <Leader>bd :bdelete<CR>
 " Files
 nnoremap <Leader>fs :update<CR>
 
-" CtrlP
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlP'
-nnoremap <Leader>bb :CtrlPBuffer<CR>
-nnoremap <Leader>ff :CtrlP<CR>
-set wildignore+=*/__pycache__/*,*.pyc,*/htmlcov/*,node_modules,*/build/*,*/media/*,*/static/*
+" Vim
+nnoremap <Leader>vcr :source $MYVIMRC<CR>
+nnoremap <Leader>vce :edit $MYVIMRC<CR>
+
+nnoremap <Leader>vpu :PlugUpdate<CR>
+nnoremap <Leader>vpd :PlugDiff<CR>
+nnoremap <Leader>vpg :PlugUpgrade<CR>
+nnoremap <Leader>vpc :PlugClean<CR>
+nnoremap <Leader>vpi :PlugInstall<CR>
 
 " surround.vim
 vmap s S
@@ -191,17 +191,32 @@ vmap <Leader>cP <Leader>cyP
 " vim-autoformat
 nnoremap <Leader>af :Autoformat<CR>
 
+" TagBar
+nmap <Leader>ct :TagbarToggle<CR>
+let g:tagbar_map_showproto = "<Nop>"
+
+" Search
+nnoremap <Leader>nh :noh<CR>
+
+" Ack
+nnoremap <Leader>/ :Ack!<Space>
+
+" vim-pydocstring
+nnoremap <Leader>ds :Pydocstring<CR>
 
 " Plugin settings
 
 " Airline
 set laststatus=2
-let g:airline_theme='base16'
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#keymap#enabled = 0
 let g:airline_detect_spell = 0
 let g:airline_section_y = 0
-let g:airline_section_x = ''
+let g:airline_section_x = 0
+"let g:airline_section_z = '%p%%%#__accent_bold#%{g:airline_symbols.linenr}%l%#__restore__#%#__accent_bold#/%L%{g:airline_symbols.maxlinenr}%#__restore__#%#__accent_bold#%{g:airline_symbols.colnr}%v%#__restore__#'
+let g:airline#extensions#poetv#enabled = 0
+let g:airline_symbols_ascii = 1
+
 let g:airline_mode_map = {
 \ '__' : '-',
 \ 'n'  : 'N',
@@ -216,58 +231,135 @@ let g:airline_mode_map = {
 \ '' : 'S',
 \ }
 
-" Rainbow
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-\'separately': {
-\'htmldjango': 0,
-\'html': 0,
-\'xml': 0,
-\}
-\}
-
 " VIM Table Mode
 let g:table_mode_corner='|'
-
-" You Complete Me
-let g:ycm_autoclose_preview_window_after_completion = 1
-nnoremap <leader>gg :YcmCompleter GoTo<CR>
-nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
-let g:ycm_python_binary_path = 'python'
 
 " Vim Markdown
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_auto_insert_bullets = 0
 let g:vim_markdown_new_list_item_indent = 0
 
-" NERD Tree
-map <leader>ft :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " Neomake
 autocmd! BufWritePost * Neomake
+autocmd! BufReadPost * Neomake
 
 " Vim Leader Guide
 let g:lmap =  {}
-let g:lmap.f = { 'name' : 'File Menu' }
-
-" Vim Leader Guide
-call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
-nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
-vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
-
-" isort
-nnoremap <leader>pi :Isort<CR>
-
-" Echodoc
-let g:echodoc#enable_at_startup = 1
-
-" GitGutter
-autocmd BufWritePost * GitGutter
-
-" Python Syntax
-let g:python_highlight_all = 1
+let g:lmap.f = {'name' : 'File Menu'}
 
 " vim-autoformat
-let g:formatters_jinja = ["htmlbeautify"]
-let g:formatters_htmldjango = ["htmlbeautify"]
+let g:formatters_jinja = ['htmlbeautify']
+let g:formatters_htmldjango = ['htmlbeautify']
+
+" Plug
+let g:plug_threads = 5
+let g:plug_timeout = 10
+let g:plug_retries = 1
+
+" Which Key
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+
+" Open Notes
+nnoremap <leader>on :edit ~/Work/notes/notes.md<CR>
+
+" Ack
+let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+let g:ack_autoclose = 1
+let g:ack_use_cword_for_empty_search = 1
+cnoreabbrev Ack Ack!
+
+" Neomake
+let g:neomake_info_sign = {'text': 'i', 'texthl': 'NeomakeInfoSign'}
+
+" Fugitive
+let g:fugitive_dynamic_colors = 0
+
+" vim-pydocstring
+let g:pydocstring_doq_path = '/home/linuxbrew/.linuxbrew/bin/doq'
+
+noremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+set completeopt=menu,menuone,noselect
+
+set shortmess+=c
+
+nnoremap <leader>gg :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gr :lua vim.lsp.buf.references()<CR>
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+
+lua << EOF
+local cmp = require'cmp'
+
+cmp.setup({
+  mapping = {
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+    ['<C-c>'] = cmp.mapping.complete(),
+  },
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+  })
+})
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+require'lspconfig'.pyright.setup{
+  capabilities = capabilities,
+  settings = {
+    python = {
+      analysis = {
+        autoImportCompletions = false,
+      }
+    }
+  }
+}
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+
+require('telescope').setup {
+  file_ignore_patterns = {"__pycache__/.*", ".venv"},
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case" or "smart_case"
+    }
+  }
+}
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require('telescope').load_extension('fzf')
+
+require('gitsigns').setup {
+  signs = {
+    add = {hl='GitSignsAdd', text = '+', numhl='GitSignsAddNr', linehl='GitSignsAddLn'},
+    change = {hl='GitSignsChange', text='~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+    delete = {hl='GitSignsDelete', text='-', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+    topdelete = {hl='GitSignsDelete', text='‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+    changedelete = {hl='GitSignsChange', text='~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+  }
+}
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    'python', 'bash', 'comment', 'css', 'dockerfile', 'html', 'javascript', 'json', 'toml', 'yaml'
+  },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    colors = {'#f2777a', '#99cc99', '#ffcc66', '#6699cc', '#cc99cc', '#66cccc', '#d3d0c8'},
+  }
+}
+
+require("lsp-rooter").setup {}
+EOF

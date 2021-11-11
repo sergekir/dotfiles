@@ -1,18 +1,15 @@
 # Path
-PATH=$HOME/.local/bin:$PATH
 
-# Virtualenv
-WORKON_HOME=$HOME/virtualenvs
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH"
 
-# PyEnv
-export PYENV_ROOT=$HOME/.tools/pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
+export EDITOR=nvim
+export TERM=xterm-256color
 
 # ZSH
 export ZSH=$HOME/.tools/oh-my-zsh
 export ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
+export ZSH_DOTENV_PROMPT=false
+
 
 ZSH_THEME="serpent"
 DISABLE_AUTO_UPDATE="true"
@@ -21,12 +18,14 @@ plugins=(
     gitignore
     docker
     docker-compose
-    django
+    dotenv
     httpie
-    pipenv
-    pyenv
+    kubectl
+    pip
+    poetry
+    poetry-shell
     vi-mode
-    virtualenvwrapper
+    wd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -41,30 +40,35 @@ setopt nosharehistory
 alias vim="nvim"
 alias vi="nvim"
 alias moc="mocp"
-alias ccat="pygmentize -g"
+alias cat="bat"
+alias ls="exa"
+alias ll="exa -lh"
+alias l="exa -lah"
+alias la="exa -lah"
+alias tree="exa -T"
+alias xcopy="xclip -selection clipboard"
+alias xopen="xdg-open"
 
-# ranger quit to opened dir
-alias ranger=". ranger"
+# Apps
+alias ranger=". ranger"  # change dir on quit
+alias plantuml="java -jar ~/.tools/plantuml/plantuml.jar"
 
 # python
-alias djcov="coverage run --source='.' manage.py test && coverage html && xdg-open ./htmlcov/index.html"
 alias pipo="pip list -o --format=columns"
 alias pipu="pip install --upgrade pip setuptools wheel"
-alias pretty_json='python -m json.tool'
+alias pj='python -m json.tool --indent=2'
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 alias gitignore_init="gi python vim > .gitignore"
 
 # docker
 alias docker-stop-all='docker stop $(docker ps -q)'
 alias dcpush='docker-compose push'
+alias docker-remove-dangling='docker rmi $(docker images -q --filter "dangling=true")'
+alias docker-restart='sudo service docker restart'
+alias docker-pytest='dcr --rm app_test pytest --numprocesses=0 --dist=no'
 
-
-export EDITOR=nvim
-
-# Theme
-BASE16_SHELL=$HOME/.tools/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-base16_eighties
+# git
+alias gdic='git icdiff'
 
 # Start or attach to Tmux
 if [[ -z "$TMUX" ]]
@@ -72,18 +76,19 @@ then
     ID="`tmux ls | grep -vm1 attached | cut -d: -f1`"
     if [[ -z "$ID" ]]
     then
-        tmux new-session
+        tmux -u new-session
     else
-        tmux attach-session -t "$ID"
+        tmux -u attach-session -t "$ID"
     fi
 fi
 
-# Pipenv
-# compdef pipenv
-_pipenv() {
-  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _PIPENV_COMPLETE=complete-zsh  pipenv)
-}
-if [[ "$(basename ${(%):-%x})" != "_pipenv" ]]; then
-  autoload -U compinit && compinit
-  compdef _pipenv pipenv
-fi
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Pre-Commit
+export PRE_COMMIT_COLOR=never
+
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
