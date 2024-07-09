@@ -28,9 +28,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-## meld
+# Settings
 
-```
-git clone https://gitlab.gnome.org/GNOME/meld.git
-apt install python3-cairo python3-gi-cairo libxml2-utils intltool
+```bash
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 ```
